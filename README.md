@@ -26,6 +26,11 @@
 # Note about Accessibility
 Implementation of accessibility will be limited but further enhanced in the future, refer back to the corresponding Notion section
 
+## About Me Section:
+The icons used in the navigation bar are from this [website](https://www.svgrepo.com/vectors/github/)
+
+
+
 
 ## Projects Section
 This section will essentially have 4 projects, each with its own description , title , tech stack and links to live preview & github
@@ -33,5 +38,15 @@ You can later add a link to a website fully dedicated to showing all the project
 
 
 # General Notes:
-**Adding Potential Easter Eggs**
+- **Adding Potential Easter Eggs**
 - Add a reference to the website and design
+- All the icons used must be suitable for both dark and light mode (this may require using one for each mode)
+- Add the following social media icons:
+    - Github
+    - Linkedin
+    - CodePen: not now but after I rework my profile and add some good work in it
+    - DEV Community: not now (maybe after I get to write some articles there)
+    - Instagram, Facebook, YouTube & Twitter: if I am able to create something relevant
+
+
+[See the original Design](https://riadhadrani.github.io/slick-portfolio-svelte/)
