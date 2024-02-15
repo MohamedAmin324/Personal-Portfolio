@@ -28,6 +28,7 @@ Implementation of accessibility will be limited but further enhanced in the futu
 
 ## About Me Section:
 The icons used in the navigation bar are from this [website](https://www.svgrepo.com/vectors/github/)
+`Navbar responsive behavior`: in mobile view, the navbar will be hidden and the user will have to press the menu button to toggle it on & off. In tablet view, it will become visible showing only the icons of different sections and finally, in the desktop view it will be completely visible.
 
 ## Projects Section
 This section will essentially have 4 projects, each with its own description , title , tech stack and links to live preview & github
@@ -45,3 +46,10 @@ You can later add a link to a website fully dedicated to showing all the project
     - Dev Community: not now (maybe after I get to write some articles there)
     - Instagram, Facebook, YouTube & Twitter: if I am able to create something relevant
 - [See the original Design](https://riadhadrani.github.io/slick-portfolio-svelte/)
+
+
+### Break points for responsive design
+- 320px — 480px: Mobile devices
+- 481px — 768px: iPads, Tablets
+- 769px — 1024px: Small screens, laptops
+- 1025px — 1200px: Desktops, large screens
