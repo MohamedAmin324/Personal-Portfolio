@@ -1,0 +1,4 @@
+@use './custom-variables';
+@forward 'bootstrap/scss/bootstrap' with(
+    $primary: custom-variables.$primary
+);

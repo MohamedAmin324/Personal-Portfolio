@@ -5,7 +5,7 @@
 - React Router
 - React Redux (if necessary)
 - TypeScript Note: This project will be implemented using JavaScript, migrating to TypeScript will come in future updates
-- CSS framework: Bootstrap CSS along with SCSS for necessary customizations
+- CSS framework: Bootstrap CSS along with SCSS for necessary customizations, also this includes using the specific version of bootstrap made for react called react-bootstrap
 - Build tool: Vite.js
 - Deployment platform: Netlify
 - Implementing Animation is not a top priority right now: potential libraries: GSAP or Motion
@@ -53,4 +53,3 @@ You can later add a link to a website fully dedicated to showing all the project
 - 481px — 768px: iPads, Tablets
 - 769px — 1024px: Small screens, laptops
 - 1025px — 1200px: Desktops, large screens
-
