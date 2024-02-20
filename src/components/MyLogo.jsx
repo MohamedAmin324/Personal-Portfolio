@@ -1,11 +1,16 @@
-import { Stack } from 'react-bootstrap';
+import { Navbar, Stack } from 'react-bootstrap';
 import imgUrl from '../assets/navigation-bar-icons/Light-Mode/coding-svgrepo-com.svg';
 
-export default function MyLogo() {
+// eslint-disable-next-line react/prop-types
+export default function MyLogo({ isSmallScreen }) {
 	return (
-		<Stack direction='horizontal'>
+		<Stack
+			direction='horizontal'
+			className='justify-content-between justify-content-md-start'
+		>
 			<img src={imgUrl} />
-			<div className='my-name ms-1 fw-bolder'>Med Amine</div>
+			<div className={isSmallScreen ? 'ms-1' : 'ms-1 fw-bolder'}>Med Amine</div>
+			<Navbar.Toggle aria-controls='basic-navbar-nav' />
 		</Stack>
 	);
 }
