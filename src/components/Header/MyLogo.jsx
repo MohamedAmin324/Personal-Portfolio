@@ -1,5 +1,5 @@
 import { Navbar, Stack } from 'react-bootstrap';
-import imgUrl from '../assets/navigation-bar-icons/Light-Mode/coding-svgrepo-com.svg';
+import imgUrl from '../../assets/navigation-bar-icons/Light-Mode/coding-svgrepo-com.svg';
 
 // eslint-disable-next-line react/prop-types
 export default function MyLogo({ isSmallScreen }) {

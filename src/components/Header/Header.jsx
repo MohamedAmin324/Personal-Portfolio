@@ -1,7 +1,7 @@
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import MyLogo from './MyLogo';
 import { useEffect, useState } from 'react';
-import { navigationItemsInfo } from './data';
+import { navigationItemsInfo } from '../../data/sections-data';
 
 export default function Header() {
 	// used to conditionally render the w-100 bootstrap class and the styles of the navbar
