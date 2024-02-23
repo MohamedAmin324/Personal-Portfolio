@@ -1,7 +1,7 @@
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import MyLogo from './MyLogo';
 import { useEffect, useState } from 'react';
-import { navigationItemsInfo } from '../../data/sections-data';
+import { NAVIGATION_ITEMS_INFO } from '../../data/sections-data';
 
 export default function Header() {
 	// used to conditionally render the w-100 bootstrap class and the styles of the navbar
@@ -28,7 +28,7 @@ export default function Header() {
 					}
 				>
 					<Nav className='justify-content-evenly w-100'>
-						{navigationItemsInfo.map(({ name, logoUrl, id }) => (
+						{NAVIGATION_ITEMS_INFO.map(({ name, logoUrl, id }) => (
 							<Nav.Item key={id}>
 								<Nav.Link>
 									<img className='me-2' src={logoUrl} />

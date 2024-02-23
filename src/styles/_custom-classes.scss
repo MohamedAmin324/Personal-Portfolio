@@ -8,6 +8,10 @@
 	@include set-margin('bottom', 2rem);
 }
 
+.icons-bar-margin {
+	@include set-margin("top", 1.5rem);
+}
+
 .custom-btn-border {
 	border: solid 2px black;
 }

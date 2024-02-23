@@ -1,5 +1,6 @@
 import { Container } from 'react-bootstrap';
 import ButtonNavigation from './ButtonNavigation.jsx';
+import SocialMediaBar from '../../components/SocialMediaBar.jsx';
 
 export default function Hero() {
 	return (
@@ -13,6 +14,7 @@ export default function Hero() {
 				collaborate and bring your digital a vision to Life.
 			</p>
 			<ButtonNavigation />
+			<SocialMediaBar/>
 		</Container>
 	);
 }

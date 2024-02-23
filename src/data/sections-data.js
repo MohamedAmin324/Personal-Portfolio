@@ -5,7 +5,7 @@ import resumeIcon from '../assets/navigation-bar-icons/Light-Mode/resume-svgrepo
 import lightModeIcon from '../assets/navigation-bar-icons/Light-Mode/Light-mode-svgrepo-com.svg';
 import { uniqueId } from 'lodash';
 
-export const navigationItemsInfo = [
+export const NAVIGATION_ITEMS_INFO= [
     {
         name: "Skills",
         logoUrl: skillsIcon,
