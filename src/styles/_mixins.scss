@@ -1,0 +1,3 @@
+@mixin set-margin($side, $value) {
+	margin-#{$side}: $value;
+}

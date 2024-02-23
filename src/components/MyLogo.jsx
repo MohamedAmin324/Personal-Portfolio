@@ -10,7 +10,7 @@ export default function MyLogo({ isSmallScreen }) {
 		>
 			<img src={imgUrl} />
 			<div className={isSmallScreen ? 'ms-1' : 'ms-1 fw-bolder'}>Med Amine</div>
-			<Navbar.Toggle aria-controls='basic-navbar-nav' />
+			<Navbar.Toggle aria-controls='navbar-nav' />
 		</Stack>
 	);
 }
