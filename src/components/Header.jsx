@@ -25,8 +25,10 @@ export default function Header() {
 					<Nav className='justify-content-evenly w-100'>
 						{navigationItemsInfo.map(({ name, logoUrl, id }) => (
 							<Nav.Item key={id}>
-								<img className='me-2' src={logoUrl} />
-								{name !== 'light mode' ? name : null}
+								<Nav.Link>
+									<img className='me-2' src={logoUrl} />
+									{name !== 'light mode' ? name : null}
+								</Nav.Link>
 							</Nav.Item>
 						))}
 					</Nav>
