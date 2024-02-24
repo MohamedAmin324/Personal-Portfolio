@@ -1,5 +1,12 @@
-@use 'bootstrap/scss/bootstrap';
-@use "./custom-classes";
-@use "./custom-variables";
+@use 'bootstrap/scss/bootstrap' as *;
+@use './custom-classes';
+@use './custom-variables';
 
-// @include bootstrap.color-mode(dark, true);
+
+@include color-mode(dark) {
+	.nav-item:hover {
+        &:not(.navbar-nav > &:last-child) {
+            background-color: unset;
+        }
+	}
+}
