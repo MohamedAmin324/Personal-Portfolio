@@ -3,7 +3,7 @@ import AboutMe from './Pages/AboutMe/main';
 import { DarkModeTheme } from './context/dark-mode-theme-context';
 
 export default function App() {
-	const [isDarkMode, setIsDarkMode] = useState(false);
+	const [isDarkMode, setIsDarkMode] = useState(true);
 	function updateDarkModeState() {
 		setIsDarkMode((prev) => !prev);
 	}

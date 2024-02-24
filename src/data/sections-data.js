@@ -19,40 +19,40 @@ export const NAVIGATION_ITEMS_INFO = [
     {
         name: "Skills",
         logosUrls: {
-            lightMode: skillsIcon,
-            darkMode: skillsIconDark,
+            lightModeUrl: skillsIcon,
+            darkModeUrl: skillsIconDark,
         },
         id: uniqueId("section-"),
     },
     {
         name: "Projects",
         logosUrls: {
-            lightMode: projectsIcon,
-            darkMode: projectsIconDark,
+            lightModeUrl: projectsIcon,
+            darkModeUrl: projectsIconDark,
         },
         id: uniqueId("section-"),
     },
     {
         name: "Contact",
         logosUrls: {
-            lightMode: contactIcon,
-            darkMode: contactIconDark,
+            lightModeUrl: contactIcon,
+            darkModeUrl: contactIconDark,
         },
         id: uniqueId("section-"),
     },
     {
         name: "Resume",
         logosUrls: {
-            lightMode: resumeIcon,
-            darkMode: resumeIconDark,
+            lightModeUrl: resumeIcon,
+            darkModeUrl: resumeIconDark,
         },
         id: uniqueId("section-"),
     },
     {
         name: "light mode",
         logosUrls: {
-            lightMode: lightModeIcon,
-            darkMode: darkModeIcon,
+            lightModeUrl: lightModeIcon,
+            darkModeUrl: darkModeIcon,
         },
         id: uniqueId("section-"),
     }

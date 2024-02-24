@@ -10,8 +10,8 @@ export const ICONS_DATA = [
     {
         name: "Github",
         iconsUrls: {
-            lightMode: githubIconUrl,
-            darkMode: githubIconDarkUrl,
+            lightModeUrl: githubIconUrl,
+            darkModeUrl: githubIconDarkUrl,
         },
         accountUrl: "https://github.com/MohamedAmin324",
         id: uniqueId("icon-"),
@@ -19,8 +19,8 @@ export const ICONS_DATA = [
     {
         name: "Linkedin",
         iconsUrls: {
-            lightMode: linkedinIconUrl,
-            darkMode: linkedinIconDarkUrl,
+            lightModeUrl: linkedinIconUrl,
+            darkModeUrl: linkedinIconDarkUrl,
         },
         accountUrl: "https://www.linkedin.com/in/mohamed-amine-a49713242/",
         id: uniqueId("icon-"),

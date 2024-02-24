@@ -46,6 +46,7 @@ You can later add a link to a website fully dedicated to showing all the project
     - Dev Community: not now (maybe after I get to write some articles there)
     - Instagram, Facebook, YouTube & Twitter: if I am able to create something relevant
 - [See the original Design](https://riadhadrani.github.io/slick-portfolio-svelte/)
+- Dark mode is the default mode
 
 
 ### Break points for responsive design
