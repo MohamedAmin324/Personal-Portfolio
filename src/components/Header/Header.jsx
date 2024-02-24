@@ -17,7 +17,6 @@ export default function Header() {
 	}, []);
 
 	const [,updateDarkModeState] = useContext(DarkModeTheme);
-	console.log(updateDarkModeState);
 
 	return (
 		<Container className='border-bottom border-dark-subtle border-2' fluid>
