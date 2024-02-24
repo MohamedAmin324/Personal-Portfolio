@@ -27,13 +27,16 @@ export default function Header() {
 				<Navbar.Collapse
 					id='navbar-nav'
 					className={isSmallScreen ? 'custom-position position-absolute' : ''}
-					data-bs-theme='dark'
+					data-bs-theme={isDarkMode && 'dark'}
+					style={isDarkMode ? { backgroundColor: 'var(--bs-body-bg)' } : {}}
 				>
 					<Nav className='justify-content-evenly w-100'>
 						{NAVIGATION_ITEMS_INFO.map(
 							({ name, logosUrls: { lightModeUrl, darkModeUrl }, id }) => (
 								<Nav.Item key={id}>
-									<Nav.Link>
+									<Nav.Link
+										className={isSmallScreen ? 'custom-link-padding' : ''}
+									>
 										<img
 											onClick={
 												name === 'light mode' ? updateDarkModeState : undefined
