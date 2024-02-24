@@ -7,7 +7,7 @@ import { useContext } from 'react';
 export default function NavigationBar({ isSmallScreen }) {
 	const [isDarkMode, updateDarkModeState] = useContext(DarkModeTheme);
 	return (
-		<Nav className='justify-content-evenly w-100'>
+		<Nav className='justify-content-evenly w-100 position-relative'>
 			{NAVIGATION_ITEMS_INFO.map(
 				({ name, logosUrls: { lightModeUrl, darkModeUrl }, id }) => (
 					<Nav.Item key={id}>

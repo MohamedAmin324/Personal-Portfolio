@@ -27,8 +27,13 @@
 .custom-position {
 	top: 70px;
 	left: -12px;
-	background-color: white;
+	z-index: 1;
+	width: 100vw;
+}
+
+.blocker {
 	height: 100vh;
+	z-index: 0;
 	width: 100vw;
 }
 
