@@ -16,7 +16,7 @@ export default function Header() {
 		return () => (window.onresize = null);
 	}, []);
 
-	const [,updateDarkModeState] = useContext(DarkModeTheme);
+	const [isDarkMode, updateDarkModeState] = useContext(DarkModeTheme);
 
 	return (
 		<Container className='border-bottom border-dark-subtle border-2' fluid>
@@ -30,18 +30,22 @@ export default function Header() {
 					data-bs-theme='dark'
 				>
 					<Nav className='justify-content-evenly w-100'>
-						{NAVIGATION_ITEMS_INFO.map(({ name, logoUrl, id }) => (
-							<Nav.Item key={id}>
-								<Nav.Link>
-									<img
-										onClick={name === 'light mode' ? updateDarkModeState : undefined}
-										className='me-2'
-										src={logoUrl}
-									/>
-									{name !== 'light mode' ? name : null}
-								</Nav.Link>
-							</Nav.Item>
-						))}
+						{NAVIGATION_ITEMS_INFO.map(
+							({ name, logosUrls: { lightModeUrl, darkModeUrl }, id }) => (
+								<Nav.Item key={id}>
+									<Nav.Link>
+										<img
+											onClick={
+												name === 'light mode' ? updateDarkModeState : undefined
+											}
+											className='me-2'
+											src={isDarkMode ? darkModeUrl : lightModeUrl}
+										/>
+										{name !== 'light mode' ? name : null}
+									</Nav.Link>
+								</Nav.Item>
+							)
+						)}
 					</Nav>
 				</Navbar.Collapse>
 			</Navbar>
