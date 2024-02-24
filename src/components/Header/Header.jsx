@@ -1,8 +1,8 @@
-import { Container, Nav, Navbar } from 'react-bootstrap';
+import { Container, Navbar } from 'react-bootstrap';
 import MyLogo from './MyLogo';
 import { useContext, useEffect, useState } from 'react';
-import { NAVIGATION_ITEMS_INFO } from '../../data/sections-data';
 import { DarkModeTheme } from '../../context/dark-mode-theme-context';
+import NavigationBar from './NavigationBar';
 
 export default function Header() {
 	// used to conditionally render the w-100 bootstrap class and the styles of the navbar
@@ -16,7 +16,7 @@ export default function Header() {
 		return () => (window.onresize = null);
 	}, []);
 
-	const [isDarkMode, updateDarkModeState] = useContext(DarkModeTheme);
+	const [isDarkMode] = useContext(DarkModeTheme);
 
 	return (
 		<Container className='border-bottom border-dark-subtle border-2' fluid>
@@ -30,26 +30,7 @@ export default function Header() {
 					data-bs-theme={isDarkMode && 'dark'}
 					style={isDarkMode ? { backgroundColor: 'var(--bs-body-bg)' } : {}}
 				>
-					<Nav className='justify-content-evenly w-100'>
-						{NAVIGATION_ITEMS_INFO.map(
-							({ name, logosUrls: { lightModeUrl, darkModeUrl }, id }) => (
-								<Nav.Item key={id}>
-									<Nav.Link
-										className={isSmallScreen ? 'custom-link-padding' : ''}
-									>
-										<img
-											onClick={
-												name === 'light mode' ? updateDarkModeState : undefined
-											}
-											className='me-2'
-											src={isDarkMode ? darkModeUrl : lightModeUrl}
-										/>
-										{name !== 'light mode' ? name : null}
-									</Nav.Link>
-								</Nav.Item>
-							)
-						)}
-					</Nav>
+					<NavigationBar isSmallScreen={isSmallScreen} />
 				</Navbar.Collapse>
 			</Navbar>
 		</Container>
