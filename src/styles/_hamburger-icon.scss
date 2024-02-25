@@ -1,0 +1,51 @@
+$line-height: 2px;
+$line-width: 30px;
+$gap-value: 8px;
+$container-height: $line-height * 3 + $gap-value * 2;
+$animation-parameters: 250ms ease-in-out;
+
+.hamburger-menu {
+	display: flex;
+	flex-direction: column;
+	gap: $gap-value;
+	height: $container-height;
+
+	&::after,
+	&::before,
+	.customized-checkbox {
+		content: '';
+		width: $line-width;
+		height: $line-height;
+		display: inline-block;
+		background-color: var(--bs-white);
+		transition: width $animation-parameters, transform $animation-parameters;
+		transform-origin: top left;
+	}
+
+	.customized-checkbox {
+		appearance: none;
+		padding-block: 0;
+		padding-inline: 0;
+		pointer-events: none;
+	}
+
+	.test {
+		width: 0;
+	}
+
+	&:has(.customized-checkbox:checked)::before {
+		transform: rotate(45deg);
+		translate: 0 $line-height / -2;
+		width: $container-height * sqrt(2);
+	}
+
+	&:has(.customized-checkbox:checked)::after {
+		transform: rotate(-45deg);
+		translate: 0 $line-height / 2;
+		width: $container-height * sqrt(2);
+	}
+
+	&:hover {
+		cursor: pointer;
+	}
+}

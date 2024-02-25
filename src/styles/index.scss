@@ -1,6 +1,6 @@
 @use 'bootstrap/scss/bootstrap' as *;
 @use './custom-classes';
-@use './custom-variables';
+@use './hamburger-icon';
 
 
 @include color-mode(dark) {
