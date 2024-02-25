@@ -10,3 +10,11 @@
         }
 	}
 }
+
+@include color-mode(light) {
+    .hamburger-menu::after,
+    .hamburger-menu::before,
+    .customized-checkbox {
+        background-color: var(--bs-black);
+    }
+}

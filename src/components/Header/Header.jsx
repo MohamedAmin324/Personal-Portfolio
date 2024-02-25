@@ -19,7 +19,7 @@ export default function Header() {
 	const [isDarkMode] = useContext(DarkModeTheme);
 
 	return (
-		<Container className='border-bottom border-dark-subtle border-2' fluid>
+		<Container className='border-bottom border-dark-subtle border-2' fluid="lg">
 			<Navbar expand='md' className='position-relative'>
 				<Navbar.Brand className={isSmallScreen ? 'w-100' : ''}>
 					<MyLogo isSmallScreen={isSmallScreen} />
