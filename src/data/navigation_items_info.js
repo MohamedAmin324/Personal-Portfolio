@@ -23,6 +23,7 @@ export const NAVIGATION_ITEMS_INFO = [
             darkModeUrl: skillsIconDark,
         },
         id: uniqueId("section-"),
+        pathName: '/Skills',
     },
     {
         name: "Projects",
@@ -31,6 +32,7 @@ export const NAVIGATION_ITEMS_INFO = [
             darkModeUrl: projectsIconDark,
         },
         id: uniqueId("section-"),
+        pathName: '/Projects',
     },
     {
         name: "Contact",
@@ -39,6 +41,7 @@ export const NAVIGATION_ITEMS_INFO = [
             darkModeUrl: contactIconDark,
         },
         id: uniqueId("section-"),
+        pathName: '/Contact',
     },
     {
         name: "Resume",
@@ -47,6 +50,7 @@ export const NAVIGATION_ITEMS_INFO = [
             darkModeUrl: resumeIconDark,
         },
         id: uniqueId("section-"),
+        pathName: '/Resume',
     },
     {
         name: "light mode",

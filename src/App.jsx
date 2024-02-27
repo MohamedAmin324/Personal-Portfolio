@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
-import AboutMe from './Pages/AboutMe/AboutMe';
 import { DarkModeTheme } from './context/dark-mode-theme-context';
+import { RouterProvider } from 'react-router-dom';
+import router from './router';
 
 export default function App() {
 	const [isDarkMode, setIsDarkMode] = useState(true);
@@ -19,7 +20,7 @@ export default function App() {
 
 	return (
 		<DarkModeTheme.Provider value={[isDarkMode, updateDarkModeState]}>
-			<AboutMe />
+			<RouterProvider router={router} />
 		</DarkModeTheme.Provider>
 	);
 }
