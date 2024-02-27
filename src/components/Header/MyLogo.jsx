@@ -14,12 +14,12 @@ export default function MyLogo({ isSmallScreen }) {
 			direction='horizontal'
 			className='justify-content-between justify-content-md-start'
 		>
-			<Link to='/'>
+			<Link to='/' className='nav-link d-flex'>
 				<img src={isDarkMode ? imgDarkUrl : imgUrl} />
 				{isSmallScreen ? null : (
-					<div className={isSmallScreen ? 'ms-1' : 'ms-1 fw-bolder'}>
+					<span className={isSmallScreen ? 'ms-1' : 'ms-1 fw-bolder'}>
 						Med Amine
-					</div>
+					</span>
 				)}
 			</Link>
 			{isSmallScreen ? (

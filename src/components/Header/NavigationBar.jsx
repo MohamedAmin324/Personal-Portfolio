@@ -16,19 +16,31 @@ export default function NavigationBar({ isSmallScreen }) {
 						{name !== 'light mode' ? (
 							<Link
 								to={pathName}
-								className={isSmallScreen ? 'custom-link-padding' : ''}
+								className={`nav-link d-flex ${
+									isSmallScreen ? 'custom-link-padding' : ''
+								}`}
 							>
 								<img
 									onClick={
 										name === 'light mode' ? updateDarkModeState : undefined
 									}
-									className='me-2'
+									className='me-'
 									src={isDarkMode ? darkModeUrl : lightModeUrl}
 								/>
-								{name !== 'light mode' ? name : null}
+								<span
+									className={name === 'Skills' ? 'ms-1' : ''}
+									style={{ alignSelf: 'center' }}
+								>
+									{name !== 'light mode' ? name : null}
+								</span>
 							</Link>
 						) : (
-							<Button>
+							<Button
+								className={`nav-link ${
+									isSmallScreen ? 'custom-link-padding' : ''
+								}`}
+								style={{ backgroundColor: 'inherit', border: 'none' }}
+							>
 								<img
 									onClick={updateDarkModeState}
 									className='me-2'
