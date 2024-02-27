@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import AboutMe from './Pages/AboutMe/main';
+import AboutMe from './Pages/AboutMe/AboutMe';
 import { DarkModeTheme } from './context/dark-mode-theme-context';
 
 export default function App() {

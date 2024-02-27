@@ -2,7 +2,7 @@
 - React
 - Increase the potential of the react app using libraries: Lodash
 - Handle email functionality: Email.JS
-- React Router
+- React Router since this is portfolio is a multi-page website
 - React Redux (if necessary)
 - TypeScript Note: This project will be implemented using JavaScript, migrating to TypeScript will come in future updates
 - CSS framework: Bootstrap CSS along with SCSS for necessary customizations, also this includes using the specific version of bootstrap made for react called react-bootstrap
