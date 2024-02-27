@@ -4,7 +4,7 @@ export default function Skills() {
 	return (
 		<>
 			<Header />
-			<h1>Skills Section (For Testing Purposes)</h1>
+			<h1 className='text-center custom-margin-top fw-bolder custom-header'>Skills</h1>
 		</>
 	);
 }

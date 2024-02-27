@@ -1,11 +1,11 @@
 import Header from '../../components/Header/Header';
-import Hero from './Hero';
+import AboutMeHero from './AboutMeHero';
 
 export default function AboutMe() {
 	return (
 		<>
 			<Header />
-			<Hero />
+			<AboutMeHero />
 		</>
 	);
 }

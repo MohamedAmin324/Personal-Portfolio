@@ -1,11 +1,10 @@
-import { Container } from 'react-bootstrap';
 import ButtonNavigation from './ButtonNavigation.jsx';
 import SocialMediaBar from '../../components/SocialMediaBar.jsx';
+import HeroSectionTemplate from '../../components/HeroSectionTemplate.jsx';
 
-export default function Hero() {
+export default function AboutMeHero() {
 	return (
-		<Container className='mt-6 text-center custom-margin-top' fluid='md'>
-			<h1 className='custom-header fw-bolder'>Mohamed Amine Basdouri</h1>
+		<HeroSectionTemplate mainTitle='Mohamed Amine Basdouri'>
 			<p className='lead fw-normal custom-margin-bottom'>
 				I am a frontend web developer from Tunisia with a passion for
 				technology, AI and cybersecurity. I specialize in creating user-friendly
@@ -15,6 +14,6 @@ export default function Hero() {
 			</p>
 			<ButtonNavigation />
 			<SocialMediaBar />
-		</Container>
+		</HeroSectionTemplate>
 	);
 }
