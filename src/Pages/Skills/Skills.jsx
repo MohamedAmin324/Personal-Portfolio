@@ -1,3 +1,10 @@
+import Header from '../../components/Header/Header';
+
 export default function Skills() {
-	return <h1>Skills Section (For Testing Purposes)</h1>;
+	return (
+		<>
+			<Header />
+			<h1>Skills Section (For Testing Purposes)</h1>
+		</>
+	);
 }
