@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { DarkModeTheme } from './context/dark-mode-theme-context';
 import { RouterProvider } from 'react-router-dom';
-import router from './router';
+import router from './react-router-configuration/router';
 
 export default function App() {
 	const [isDarkMode, setIsDarkMode] = useState(true);

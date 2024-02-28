@@ -1,7 +1,7 @@
 @use './mixins' as *;
 
 .custom-margin-top {
-	@include set-margin('top', 5rem);
+	@include set-margin('top', 4.15rem);
 }
 
 .custom-margin-bottom {
