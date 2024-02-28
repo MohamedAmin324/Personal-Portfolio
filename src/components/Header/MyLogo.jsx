@@ -1,14 +1,14 @@
 import { Navbar, Stack } from 'react-bootstrap';
 import imgUrl from '../../assets/navigation-bar-icons/Light-Mode/coding-svgrepo-com.svg';
 import imgDarkUrl from '../../assets/navigation-bar-icons/Dark-Mode/coding-svgrepo-com.svg';
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 import { DarkModeTheme } from '../../context/dark-mode-theme-context';
 import { Link } from 'react-router-dom';
 
 // eslint-disable-next-line react/prop-types
-export default function MyLogo({ isSmallScreen }) {
+export default function MyLogo({ isSmallScreen, isExpanded, updateExpandedState }) {
 	const [isDarkMode] = useContext(DarkModeTheme);
-	const [isClicked, setIsClicked] = useState(false);
+
 	return (
 		<Stack
 			direction='horizontal'
@@ -32,13 +32,13 @@ export default function MyLogo({ isSmallScreen }) {
 					bsPrefix='hamburger-menu'
 					aria-controls='navbar-nav'
 					as='div'
-					onClick={() => setIsClicked(!isClicked)}
+					onClick={() => updateExpandedState(!isExpanded)}
 				>
 					<input
 						type='checkbox'
-						checked={isClicked}
-						onChange={() => setIsClicked(!isClicked)}
-						className={`customized-checkbox ${isClicked ? 'test' : ''}`}
+						checked={isExpanded}
+						onChange={() => updateExpandedState(!isExpanded)}
+						className={`customized-checkbox ${isExpanded ? 'w-0' : ''}`}
 					/>
 				</Navbar.Toggle>
 			) : null}

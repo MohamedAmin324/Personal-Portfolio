@@ -17,12 +17,24 @@ export default function Header() {
 	}, []);
 
 	const [isDarkMode] = useContext(DarkModeTheme);
+	const [isExpanded, setIsExpanded] = useState(false);
+
+	const updateExpandedState = () => setIsExpanded((prev) => !prev);
 
 	return (
-		<Container className='border-bottom border-dark-subtle border-2' fluid="lg">
-			<Navbar expand='md' className='position-relative'>
+		<Container className='border-bottom border-dark-subtle border-2' fluid='lg'>
+			<Navbar
+				expand='md'
+				className='position-relative'
+				collapseOnSelect
+				onToggle={(expanded) => setIsExpanded(expanded)}
+			>
 				<Navbar.Brand className={isSmallScreen ? 'w-100' : ''}>
-					<MyLogo isSmallScreen={isSmallScreen} />
+					<MyLogo
+						isSmallScreen={isSmallScreen}
+						isExpanded={isExpanded}
+						updateExpandedState={updateExpandedState}
+					/>
 				</Navbar.Brand>
 				<Navbar.Collapse
 					id='navbar-nav'
@@ -32,7 +44,7 @@ export default function Header() {
 						backgroundColor: isDarkMode ? 'var(--bs-body-bg)' : 'white',
 					}}
 				>
-					{/* I had to add a div element rendered conditionally on small screen because I wanted the navigation bar to cover the whole page when it reveals itself but implementing directly on that element mad the default fade in/out animation provided by bootstrap a bit clunky & lagging because setting the height to 100vh explicitly conflicted with a style attribute that also sets the height at the same time  */}
+					{/* I had to add a div element rendered conditionally on small screen because I wanted the navigation bar to cover the whole page when it reveals itself but implementing directly on that element made the default fade in/out animation provided by bootstrap a bit clunky & lagging because setting the height to 100vh explicitly conflicted with a style attribute that also sets the height at the same time  */}
 					{isSmallScreen ? (
 						<div
 							className='blocker top-0 start-0 position-absolute'

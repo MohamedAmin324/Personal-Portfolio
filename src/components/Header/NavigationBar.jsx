@@ -14,26 +14,32 @@ export default function NavigationBar({ isSmallScreen }) {
 				({ name, logosUrls: { lightModeUrl, darkModeUrl }, id, pathName }) => (
 					<Nav.Item key={id}>
 						{name !== 'light mode' ? (
-							<Link
-								to={pathName}
-								className={`nav-link d-flex ${
-									isSmallScreen ? 'custom-link-padding' : ''
-								}`}
-							>
-								<img
-									onClick={
-										name === 'light mode' ? updateDarkModeState : undefined
-									}
-									className='me-'
-									src={isDarkMode ? darkModeUrl : lightModeUrl}
-								/>
-								<span
-									className={name === 'Skills' ? 'ms-1' : ''}
-									style={{ alignSelf: 'center' }}
+							/*
+							Since wrapping an a element inside another will throw error, I changed the HTML element rendered by Nav.Link
+							The entire reason why I wrapping the router link inside a bootstrap link is to be able to toggle te navbar off when the user clicks on a nav link
+							 */
+							<Nav.Link as='div' bsPrefix='unstyled-link-wrapper' eventKey={id}>
+								<Link
+									to={pathName}
+									className={`nav-link ${name !== 'Skills' ? 'd-flex' : ''} ${
+										isSmallScreen ? 'custom-link-padding' : ''
+									}`}
 								>
-									{name !== 'light mode' ? name : null}
-								</span>
-							</Link>
+									<img
+										onClick={
+											name === 'light mode' ? updateDarkModeState : undefined
+										}
+										className='me-'
+										src={isDarkMode ? darkModeUrl : lightModeUrl}
+									/>
+									<span
+										className={name === 'Skills' ? 'ms-1' : ''}
+										style={{ alignSelf: 'center' }}
+									>
+										{name !== 'light mode' ? name : null}
+									</span>
+								</Link>
+							</Nav.Link>
 						) : (
 							<Button
 								className={`nav-link ${
