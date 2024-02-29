@@ -21,8 +21,21 @@ export default function Header() {
 
 	const updateExpandedState = () => setIsExpanded((prev) => !prev);
 
+	useEffect(() => {
+		// prevent scrolling behavior when the navbar is expanded
+		const bodyElement = document.body;
+		isExpanded
+			? (bodyElement.style.overflow = 'hidden')
+			: (bodyElement.style.overflow = 'scroll');
+	}, [isExpanded]);
+
 	return (
-		<Container className='border-bottom border-dark-subtle border-2' fluid='lg'>
+		<Container
+			className={`border-bottom border-dark-subtle border-2 position-sticky top-0 bg-${
+				isDarkMode ? 'dark' : 'light'
+			}`}
+			fluid='lg'
+		>
 			<Navbar
 				expand='md'
 				className='position-relative'
