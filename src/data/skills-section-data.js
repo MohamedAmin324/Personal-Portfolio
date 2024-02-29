@@ -10,67 +10,88 @@ import bsIcon from "../assets/skills-section-icons/frameworks&libraries/CSS-fram
 import reactIcon from "../assets/skills-section-icons/frameworks&libraries/react&react-ecosystem/react-javascript-js-framework-facebook-svgrepo-com.svg";
 import reduxIcon from "../assets/skills-section-icons/frameworks&libraries/react&react-ecosystem/redux-svgrepo-com.svg";
 import reactRouterIcon from "../assets/skills-section-icons/frameworks&libraries/react&react-ecosystem/react-router-svgrepo-com.svg";
+import reactQueryIcon from "../assets/skills-section-icons/frameworks&libraries/react&react-ecosystem/react-query-svgrepo-com.svg";
 
 
 import gitIcon from "../assets/skills-section-icons/tools&systems/git-svgrepo-com.svg";
 import linuxIcon from "../assets/skills-section-icons/tools&systems/linux-svgrepo-com.svg";
 import viteIcon from "../assets/skills-section-icons/tools&systems/vite-svgrepo-com.svg";
 
+import { uniqueId } from "lodash";
+
 const SKILLS_OBJ_INFO = [
     {
-        cardName: "Programming Languages",
+        cardTitle: "Programming Languages",
+        cardId: uniqueId("card-"),
         iconsList: [
             {
                 name: "JavaScript",
                 iconUrl: javascriptIcon,
+                itemId: uniqueId("language-"),
             },
             {
                 name: "Java",
                 iconUrl: javaIcon,
+                itemId: uniqueId("language-"),
             },
             {
                 name: "HTML",
                 iconUrl: htmlIcon,
+                itemId: uniqueId("language-"),
             },
             {
                 name: "CSS",
                 iconUrl: cssIcon,
+                itemId: uniqueId("language-"),
             },
             {
                 name: "SCSS",
                 iconUrl: scssIcon,
+                itemId: uniqueId("language-"),
             },
             {
                 name: "Python",
                 iconUrl: pythonIcon,
+                itemId: uniqueId("language-"),
             },
         ]
     },
     {
-        cardName: "Frameworks & Libraries",
+        cardTitle: "Frameworks & Libraries",
+        cardId: uniqueId("card-"),
         iconsList: [
             {
                 name: "Bootstrap",
                 iconUrl: bsIcon,
+                itemId: uniqueId("framework-"),
             },
             {
                 name: "React",
                 iconUrl: reactIcon,
+                itemId: uniqueId("framework-"),
                 ecosystemIcons: [
                     {
                         name: "React Redux",
                         iconUrl: reduxIcon,
+                        itemId: uniqueId("ecosystem-"),
                     },
                     {
                         name: "React Router",
-                        iconUrl: reactRouterIcon
+                        iconUrl: reactRouterIcon,
+                        itemId: uniqueId("ecosystem-"),
+                    },
+                    {
+                        name: "React Query",
+                        iconUrl: reactQueryIcon,
+                        itemId: uniqueId("ecosystem-"),
                     }
                 ]
             }
         ]
     },
     {
-        cardName: 'Tools & Systems',
+        cardTitle: 'Tools & Systems',
+        cardId: uniqueId("card-"),
         iconsList: [
             {
                 name: "Git",

@@ -1,6 +1,6 @@
 import { Container } from 'react-bootstrap';
 
-// eslint-disable-next-line react/prop-types
+
 export default function HeroSectionTemplate({ mainTitle, children }) {
 	return (
 		<Container className='text-center custom-margin-top' fluid='md'>

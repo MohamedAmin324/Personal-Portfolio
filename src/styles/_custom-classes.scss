@@ -9,7 +9,7 @@
 }
 
 .icons-bar-margin {
-	@include set-margin("top", 1.5rem);
+	@include set-margin('top', 1.5rem);
 }
 
 .custom-btn-border {
@@ -35,6 +35,11 @@
 	height: 100vh;
 	z-index: 0;
 	width: 100vw;
+}
+
+.svg-size {
+	width: 30px;
+	height: 30px;
 }
 
 .nav-item:hover {
