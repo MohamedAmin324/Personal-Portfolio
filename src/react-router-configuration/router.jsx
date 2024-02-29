@@ -1,10 +1,10 @@
 import { createBrowserRouter } from 'react-router-dom';
 import Projects from '../Pages/Projects/Projects';
-import Contact from '../Pages/Contact/Contact';
 import Resume from '../Pages/Resume/Resume';
 import NavLayout from './NavLayout';
 import SkillsHero from '../Pages/Skills/SkillsHero';
 import AboutMeHero from '../Pages/AboutMe/AboutMeHero';
+import ContactHero from '../Pages/Contact/Contact';
 
 const router = createBrowserRouter([
 	{
@@ -24,7 +24,7 @@ const router = createBrowserRouter([
 			},
 			{
 				path: '/Contact',
-				element: <Contact />,
+				element: <ContactHero />,
 			},
 			{
 				path: '/Resume',
