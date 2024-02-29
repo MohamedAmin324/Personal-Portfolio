@@ -25,16 +25,6 @@ const SKILLS_OBJ_INFO = [
         cardId: uniqueId("card-"),
         iconsList: [
             {
-                name: "JavaScript",
-                iconUrl: javascriptIcon,
-                itemId: uniqueId("language-"),
-            },
-            {
-                name: "Java",
-                iconUrl: javaIcon,
-                itemId: uniqueId("language-"),
-            },
-            {
                 name: "HTML",
                 iconUrl: htmlIcon,
                 itemId: uniqueId("language-"),
@@ -50,6 +40,16 @@ const SKILLS_OBJ_INFO = [
                 itemId: uniqueId("language-"),
             },
             {
+                name: "JavaScript",
+                iconUrl: javascriptIcon,
+                itemId: uniqueId("language-"),
+            },
+            {
+                name: "Java",
+                iconUrl: javaIcon,
+                itemId: uniqueId("language-"),
+            },
+            {
                 name: "Python",
                 iconUrl: pythonIcon,
                 itemId: uniqueId("language-"),
@@ -61,32 +61,32 @@ const SKILLS_OBJ_INFO = [
         cardId: uniqueId("card-"),
         iconsList: [
             {
-                name: "Bootstrap",
-                iconUrl: bsIcon,
-                itemId: uniqueId("framework-"),
-            },
-            {
                 name: "React",
                 iconUrl: reactIcon,
                 itemId: uniqueId("framework-"),
                 ecoSystemIcons: [
-                    {
-                        name: "React Redux",
-                        iconUrl: reduxIcon,
-                        itemId: uniqueId("ecosystem-"),
-                    },
                     {
                         name: "React Router",
                         iconUrl: reactRouterIcon,
                         itemId: uniqueId("ecosystem-"),
                     },
                     {
+                        name: "React Redux",
+                        iconUrl: reduxIcon,
+                        itemId: uniqueId("ecosystem-"),
+                    },
+                    {
                         name: "React Query",
                         iconUrl: reactQueryIcon,
                         itemId: uniqueId("ecosystem-"),
-                    }
+                    },
                 ]
-            }
+            },
+            {
+                name: "Bootstrap",
+                iconUrl: bsIcon,
+                itemId: uniqueId("framework-"),
+            },
         ]
     },
     {
@@ -98,13 +98,13 @@ const SKILLS_OBJ_INFO = [
                 iconUrl: gitIcon,
             },
             {
+                name: "Vite",
+                iconUrl: viteIcon,
+            },
+            {
                 name: "Linux",
                 iconUrl: linuxIcon,
             },
-            {
-                name: "Vite",
-                iconUrl: viteIcon,
-            }
         ]
     }
 ]

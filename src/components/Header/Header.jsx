@@ -21,8 +21,26 @@ export default function Header() {
 
 	const updateExpandedState = () => setIsExpanded((prev) => !prev);
 
+	useEffect(() => {
+		// prevent scrolling behavior when the navbar is expanded
+		const bodyElement = document.body;
+		isExpanded
+			? (bodyElement.style.overflow = 'hidden')
+			: (bodyElement.style.overflow = 'scroll');
+
+		// hide the dropdown toggle when the navbar is expanded because it keeps showing up on top of the .blocker element set on the navbar
+		const dropDownToggle = document.querySelector('.dropdown-toggle');
+		// keep that little question mark there (the optional chaining operator) or else the UI will entirely break when the user visit another page, the dropDownToggle will no longer be available
+		dropDownToggle?.classList.toggle('dropdown-toggle-custom', isExpanded);
+	}, [isExpanded]);
+
 	return (
-		<Container className='border-bottom border-dark-subtle border-2' fluid='lg'>
+		<Container
+			className={`border-bottom border-dark-subtle border-2 position-sticky top-0 bg-${
+				isDarkMode ? 'dark' : 'light'
+			}`}
+			fluid='lg'
+		>
 			<Navbar
 				expand='md'
 				className='position-relative'

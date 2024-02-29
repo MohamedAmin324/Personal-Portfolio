@@ -17,10 +17,14 @@ export default function SkillsCard({ cardTitle, iconsList, cardId }) {
 					<div key={itemId} className='d-flex'>
 						<img src={iconUrl} className='svg-size me-3' />
 						{isUndefined(ecoSystemIcons) ? (
-							<span>{name}</span>
+							<span className='fs-5 align-self-center'>{name}</span>
 						) : (
-							<Dropdown>
-								<Dropdown.Toggle as='span' id='dropdown-basic'>
+							<Dropdown className='fs-5 align-self-center'>
+								<Dropdown.Toggle
+									as='span'
+									id='dropdown-basic'
+									className='position-relative'
+								>
 									{name}
 								</Dropdown.Toggle>
 
