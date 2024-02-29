@@ -21,7 +21,7 @@ import { uniqueId } from "lodash";
 
 const SKILLS_OBJ_INFO = [
     {
-        cardTitle: "Programming Languages",
+        cardTitle: "Languages",
         cardId: uniqueId("card-"),
         iconsList: [
             {
@@ -69,7 +69,7 @@ const SKILLS_OBJ_INFO = [
                 name: "React",
                 iconUrl: reactIcon,
                 itemId: uniqueId("framework-"),
-                ecosystemIcons: [
+                ecoSystemIcons: [
                     {
                         name: "React Redux",
                         iconUrl: reduxIcon,
