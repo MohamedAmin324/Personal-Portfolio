@@ -2,12 +2,23 @@ import { Button, Form } from 'react-bootstrap';
 import HeroSectionTemplate from '../../components/HeroSectionTemplate';
 import emailjs from '@emailjs/browser';
 import FormInput from './FormInput';
-import { useContext, useEffect, useRef } from 'react';
+import { useContext, useEffect, useRef, useState } from 'react';
 import { DarkModeTheme } from '../../context/dark-mode-theme-context';
+import NotificationModal from './NotificationModal';
 
 export default function ContactHero() {
 	const [isDarkMode] = useContext(DarkModeTheme);
+	const [processInfo, setProcessInfo] = useState({
+		showModal: false,
+		message: '',
+	});
 	const contactForm = useRef(null);
+
+	const updateModalState = (toggleModal, messageText) =>
+		setProcessInfo({
+			showModal: toggleModal,
+			message: messageText,
+		});
 
 	useEffect(() => {
 		window.onload = () => {
@@ -25,8 +36,8 @@ export default function ContactHero() {
 
 		emailjs
 			.sendForm('service_ohvs2p7', 'template_pu7andg', contactForm.current)
-			.then(() => console.log('SUCCESS'))
-			.catch((err) => console.log(err));
+			.then(() => updateModalState(true, 'Email Sent Successfully!!!'))
+			.catch((err) => updateModalState('true', err.message));
 	}
 
 	return (
@@ -76,11 +87,16 @@ export default function ContactHero() {
 				<Button
 					type='submit'
 					variant={isDarkMode ? 'outline-light' : 'outline-dark'}
-					className='mx-auto d-block btn-lg'
+					className='mx-auto d-block btn-lg mb-5'
 					style={{ width: '20%' }}
 				>
 					Send
 				</Button>
+
+				<NotificationModal
+					{...processInfo}
+					updateModalState={updateModalState}
+				/>
 			</Form>
 		</HeroSectionTemplate>
 	);
