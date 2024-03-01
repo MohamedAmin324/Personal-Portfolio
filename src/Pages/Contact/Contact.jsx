@@ -8,10 +8,13 @@ import NotificationModal from './NotificationModal';
 
 export default function ContactHero() {
 	const [isDarkMode] = useContext(DarkModeTheme);
+
 	const [processInfo, setProcessInfo] = useState({
 		showModal: false,
 		message: '',
 	});
+	
+	const [validate, setValidate] = useState(false);
 	const contactForm = useRef(null);
 
 	const updateModalState = (toggleModal, messageText) =>
@@ -31,18 +34,36 @@ export default function ContactHero() {
 		};
 	}, []);
 
+	useEffect(() => {
+		if(processInfo.showModal === false) {
+			contactForm.current.reset();
+			setValidate(false);
+		}
+	}, [processInfo]);
+
 	function handleSubmit(eventObj) {
+		const form = eventObj.target;
 		eventObj.preventDefault();
+		if (!form.checkValidity()) {
+			setValidate(true);
+			return;
+		}
 
 		emailjs
 			.sendForm('service_ohvs2p7', 'template_pu7andg', contactForm.current)
 			.then(() => updateModalState(true, 'Email Sent Successfully!!!'))
-			.catch((err) => updateModalState('true', err.message));
+			.catch((err) => updateModalState(true, err.message));
 	}
 
 	return (
 		<HeroSectionTemplate mainTitle='Contact Me'>
-			<Form ref={contactForm} className='contact-form' onSubmit={handleSubmit}>
+			<Form
+				noValidate
+				validated={validate}
+				ref={contactForm}
+				className='contact-form'
+				onSubmit={handleSubmit}
+			>
 				<FormInput
 					htmlFor='name-input'
 					id='name-input'
@@ -50,6 +71,7 @@ export default function ContactHero() {
 					type='text'
 					labelText='Full Name'
 					isRequired={true}
+					validationErrorMsg='Please Provide a Name'
 				/>
 
 				<FormInput
@@ -59,6 +81,7 @@ export default function ContactHero() {
 					type='email'
 					labelText='Email'
 					isRequired={true}
+					validationErrorMsg='Please Provide a valid Email'
 				/>
 
 				<FormInput
@@ -82,6 +105,9 @@ export default function ContactHero() {
 						style={{ height: '150px' }}
 						required
 					/>
+					<Form.Control.Feedback type='invalid'>
+						Provide an Email Body
+					</Form.Control.Feedback>
 				</Form.Group>
 
 				<Button
