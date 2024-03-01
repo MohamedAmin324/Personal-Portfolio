@@ -1,25 +1,24 @@
 import { Button, Form } from 'react-bootstrap';
 import HeroSectionTemplate from '../../components/HeroSectionTemplate';
+import FormInput from './FormInput';
 
 export default function ContactHero() {
-
-	
 	return (
 		<HeroSectionTemplate mainTitle='Contact Me'>
 			<Form className='contact-form'>
-				<Form.Group className='mx-auto custom-width'>
-					<Form.Label htmlFor='email-input' className='fs-5'>
-						Email
-					</Form.Label>
-					<Form.Control id='email-input' type='email' className='' />
-				</Form.Group>
+				<FormInput
+					htmlFor='email-input'
+					id='email-input'
+					type='email'
+					labelText='Email'
+				/>
 
-				<Form.Group className='mx-auto custom-width'>
-					<Form.Label htmlFor='name-input' className='fs-5'>
-						Full Name
-					</Form.Label>
-					<Form.Control id='name-input' type='text' />
-				</Form.Group>
+				<FormInput
+					htmlFor='email-input'
+					id='email-input'
+					type='email'
+					labelText='Full Name'
+				/>
 
 				<Form.Group className='mx-auto custom-width'>
 					<Form.Label htmlFor='message-body' className='fs-5'>
