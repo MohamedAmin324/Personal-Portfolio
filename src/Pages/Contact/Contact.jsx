@@ -1,8 +1,12 @@
 import { Button, Form } from 'react-bootstrap';
 import HeroSectionTemplate from '../../components/HeroSectionTemplate';
 import FormInput from './FormInput';
+import { useContext } from 'react';
+import { DarkModeTheme } from '../../context/dark-mode-theme-context';
 
 export default function ContactHero() {
+	const [isDarkMode] = useContext(DarkModeTheme);
+
 	return (
 		<HeroSectionTemplate mainTitle='Contact Me'>
 			<Form className='contact-form'>
@@ -14,9 +18,9 @@ export default function ContactHero() {
 				/>
 
 				<FormInput
-					htmlFor='email-input'
-					id='email-input'
-					type='email'
+					htmlFor='name-input'
+					id='name-input'
+					type='text'
 					labelText='Full Name'
 				/>
 
@@ -32,7 +36,12 @@ export default function ContactHero() {
 					/>
 				</Form.Group>
 
-				<Button type='submit' className='mx-auto d-block'>
+				<Button
+					type='submit'
+					variant={isDarkMode ? 'outline-light' : 'outline-dark'}
+					className='mx-auto d-block btn-lg'
+					style={{ width: '20%' }}
+				>
 					Send
 				</Button>
 			</Form>

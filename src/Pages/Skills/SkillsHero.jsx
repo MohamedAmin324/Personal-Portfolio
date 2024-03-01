@@ -1,7 +1,7 @@
 import { Col, Container, Row } from 'react-bootstrap';
 import HeroSectionTemplate from '../../components/HeroSectionTemplate';
 
-import SkillsCard from './skillsCard';
+import SkillsCard from "./SkillsCard";
 import SKILLS_OBJ_INFO from '../../data/skills-section-data';
 
 export default function SkillsHero() {
