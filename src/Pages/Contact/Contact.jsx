@@ -38,6 +38,7 @@ export default function ContactHero() {
 					name='from_name'
 					type='text'
 					labelText='Full Name'
+					isRequired={true}
 				/>
 
 				<FormInput
@@ -46,11 +47,21 @@ export default function ContactHero() {
 					name='user_email'
 					type='email'
 					labelText='Email'
+					isRequired={true}
+				/>
+
+				<FormInput
+					htmlFor='phone-input'
+					id='phone-input'
+					name='user_phone'
+					type='tel'
+					labelText='Phone'
+					isRequired={false}
 				/>
 
 				<Form.Group className='mx-auto custom-width'>
 					<Form.Label htmlFor='message-body' className='fs-5'>
-						Message
+						Message <span style={{ color: 'red' }}>*</span>
 					</Form.Label>
 					<Form.Control
 						id='message-body'
@@ -58,6 +69,7 @@ export default function ContactHero() {
 						name='message'
 						className='p-3'
 						style={{ height: '150px' }}
+						required
 					/>
 				</Form.Group>
 
