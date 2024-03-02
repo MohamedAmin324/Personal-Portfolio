@@ -36,7 +36,7 @@ export default function Header() {
 
 	return (
 		<Container
-			className={`border-bottom border-dark-subtle border-2 position-sticky top-0 bg-${
+			className={`border-bottom z-3 border-dark-subtle border-2 position-sticky top-0 bg-${
 				isDarkMode ? 'dark' : 'light'
 			}`}
 			fluid='lg'
