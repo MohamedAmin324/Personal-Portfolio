@@ -104,8 +104,8 @@ export default function ContactHero() {
 				<Button
 					type='submit'
 					variant={isDarkMode ? 'outline-light' : 'outline-dark'}
-					className='mx-auto d-block btn-lg mb-5'
-					style={{ width: '20%' }}
+					className='mx-auto d-block btn-lg mb-5 custom-btn-width'
+					// style={{ width: '20%' }}
 				>
 					Send
 				</Button>

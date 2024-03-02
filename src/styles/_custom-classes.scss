@@ -70,6 +70,12 @@
 	}
 }
 
+@media (width > 481px) {
+	.custom-btn-width {
+		width: 20%;
+	}
+}
+
 .contact-form > :not(button) {
 	margin-bottom: 1.5rem;
 }
