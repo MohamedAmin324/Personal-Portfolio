@@ -13,7 +13,7 @@ export default function ContactHero() {
 		showModal: false,
 		message: '',
 	});
-	
+
 	const [validate, setValidate] = useState(false);
 	const contactForm = useRef(null);
 
@@ -24,18 +24,7 @@ export default function ContactHero() {
 		});
 
 	useEffect(() => {
-		window.onload = () => {
-			emailjs.init({
-				publicKey: 'b3JKOQxCz9TP9J-sj',
-			});
-		};
-		return () => {
-			window.onload = null;
-		};
-	}, []);
-
-	useEffect(() => {
-		if(processInfo.showModal === false) {
+		if (processInfo.showModal === false) {
 			contactForm.current.reset();
 			setValidate(false);
 		}
@@ -48,6 +37,8 @@ export default function ContactHero() {
 			setValidate(true);
 			return;
 		}
+
+		emailjs.init({ publicKey: 'b3JKOQxCz9TP9J-sj' });
 
 		emailjs
 			.sendForm('service_ohvs2p7', 'template_pu7andg', contactForm.current)

@@ -10,7 +10,7 @@ import contactIconDark from "../assets/navigation-bar-icons/Dark-Mode/contact-se
 import resumeIcon from '../assets/navigation-bar-icons/Light-Mode/resume-svgrepo-com.svg';
 import resumeIconDark from "../assets/navigation-bar-icons/Dark-Mode/resume-svgrepo-com.svg";
 
-import lightModeIcon from '../assets/navigation-bar-icons/Light-Mode/Light-mode-svgrepo-com.svg';
+import lightModeIcon from '../assets/navigation-bar-icons/Light-Mode/light-mode-svgrepo-com.svg';
 import darkModeIcon from "../assets/navigation-bar-icons/Dark-Mode/Dark-mode-svgrepo-com.svg"
 
 import { uniqueId } from 'lodash';
@@ -55,8 +55,8 @@ export const NAVIGATION_ITEMS_INFO = [
     {
         name: "light mode",
         logosUrls: {
-            lightModeUrl: lightModeIcon,
-            darkModeUrl: darkModeIcon,
+            lightModeUrl: darkModeIcon,
+            darkModeUrl: lightModeIcon,
         },
         id: uniqueId("section-"),
     }
