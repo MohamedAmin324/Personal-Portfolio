@@ -5,7 +5,7 @@ import { useContext } from 'react';
 import { DarkModeTheme } from '../../context/dark-mode-theme-context';
 import { Link } from 'react-router-dom';
 
-// eslint-disable-next-line react/prop-types
+
 export default function MyLogo({ isSmallScreen, isExpanded, updateExpandedState }) {
 	const [isDarkMode] = useContext(DarkModeTheme);
 

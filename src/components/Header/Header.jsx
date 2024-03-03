@@ -39,41 +39,43 @@ export default function Header() {
 			className={`border-bottom z-3 border-dark-subtle border-2 position-sticky top-0 bg-${
 				isDarkMode ? 'dark' : 'light'
 			}`}
-			fluid='lg'
+			fluid
 		>
-			<Navbar
-				expand='md'
-				className='position-relative'
-				collapseOnSelect
-				onToggle={(expanded) => setIsExpanded(expanded)}
-			>
-				<Navbar.Brand className={isSmallScreen ? 'w-100' : ''}>
-					<MyLogo
-						isSmallScreen={isSmallScreen}
-						isExpanded={isExpanded}
-						updateExpandedState={updateExpandedState}
-					/>
-				</Navbar.Brand>
-				<Navbar.Collapse
-					id='navbar-nav'
-					className={isSmallScreen ? 'custom-position position-absolute' : ''}
-					data-bs-theme={isDarkMode && 'dark'}
-					style={{
-						backgroundColor: isDarkMode ? 'var(--bs-body-bg)' : 'white',
-					}}
+			<Container fluid='lg'>
+				<Navbar
+					expand='md'
+					className='position-relative pb-0'
+					collapseOnSelect
+					onToggle={(expanded) => setIsExpanded(expanded)}
 				>
-					{/* I had to add a div element rendered conditionally on small screen because I wanted the navigation bar to cover the whole page when it reveals itself but implementing directly on that element made the default fade in/out animation provided by bootstrap a bit clunky & lagging because setting the height to 100vh explicitly conflicted with a style attribute that also sets the height at the same time  */}
-					{isSmallScreen ? (
-						<div
-							className='blocker top-0 start-0 position-absolute'
-							style={{
-								backgroundColor: isDarkMode ? 'var(--bs-body-bg)' : 'white',
-							}}
-						></div>
-					) : null}
-					<NavigationBar isSmallScreen={isSmallScreen} />
-				</Navbar.Collapse>
-			</Navbar>
+					<Navbar.Brand className={isSmallScreen ? 'pt-0 w-100' : 'pt-0'}>
+						<MyLogo
+							isSmallScreen={isSmallScreen}
+							isExpanded={isExpanded}
+							updateExpandedState={updateExpandedState}
+						/>
+					</Navbar.Brand>
+					<Navbar.Collapse
+						id='navbar-nav'
+						className={isSmallScreen ? 'custom-position position-absolute' : ''}
+						data-bs-theme={isDarkMode && 'dark'}
+						style={{
+							backgroundColor: isDarkMode ? 'var(--bs-body-bg)' : 'white',
+						}}
+					>
+						{/* I had to add a div element rendered conditionally on small screen because I wanted the navigation bar to cover the whole page when it reveals itself but implementing directly on that element made the default fade in/out animation provided by bootstrap a bit clunky & lagging because setting the height to 100vh explicitly conflicted with a style attribute that also sets the height at the same time  */}
+						{isSmallScreen ? (
+							<div
+								className='blocker top-0 start-0 position-absolute'
+								style={{
+									backgroundColor: isDarkMode ? 'var(--bs-body-bg)' : 'white',
+								}}
+							></div>
+						) : null}
+						<NavigationBar isSmallScreen={isSmallScreen} />
+					</Navbar.Collapse>
+				</Navbar>
+			</Container>
 		</Container>
 	);
 }

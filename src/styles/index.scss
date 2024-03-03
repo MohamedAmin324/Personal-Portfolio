@@ -17,4 +17,9 @@
     .customized-checkbox {
         background-color: var(--bs-black);
     }
+
+    // make the carousel controls visible on light mode
+    .carousel-control-prev-icon, .carousel-control-next-icon {
+        background-color: var(--bs-black);
+    }
 }

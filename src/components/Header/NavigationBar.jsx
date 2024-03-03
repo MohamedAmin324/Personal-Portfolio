@@ -4,7 +4,7 @@ import { DarkModeTheme } from '../../context/dark-mode-theme-context';
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 
-// eslint-disable-next-line react/prop-types
+
 export default function NavigationBar({ isSmallScreen }) {
 	const [isDarkMode, updateDarkModeState] = useContext(DarkModeTheme);
 
