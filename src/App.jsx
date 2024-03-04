@@ -2,9 +2,16 @@ import { useEffect, useState } from 'react';
 import { DarkModeTheme } from './context/dark-mode-theme-context';
 import { RouterProvider } from 'react-router-dom';
 import router from './react-router-configuration/router';
+/*
+Unless you have the easter-eggs-configuration folder in the src, keep the useSecretModalConfiguration custom hook & secretModal component commented out to ensure normal functionality in the development build
+ */
+// import useSecretModalConfiguration from './easter-eggs-configuration/useSecretModalConfiguration';
+// import SecretModal from './easter-eggs-configuration/SecretModal';
 
 export default function App() {
 	const [isDarkMode, setIsDarkMode] = useState(true);
+
+	// const { modalState, handleModalClose } = useSecretModalConfiguration();
 
 	useEffect(() => {
 		/*
@@ -21,6 +28,7 @@ export default function App() {
 	return (
 		<DarkModeTheme.Provider value={[isDarkMode, updateDarkModeState]}>
 			<RouterProvider router={router} />
+			{/* <SecretModal show={modalState} handleModalClose={handleModalClose} /> */}
 		</DarkModeTheme.Provider>
 	);
 }

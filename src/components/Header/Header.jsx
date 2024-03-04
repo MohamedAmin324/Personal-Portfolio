@@ -41,7 +41,7 @@ export default function Header() {
 			}`}
 			fluid
 		>
-			<Container fluid='lg'>
+			<Container style={isDarkMode ? {} : { backgroundColor: 'white' }}>
 				<Navbar
 					expand='md'
 					className='position-relative pb-0'
