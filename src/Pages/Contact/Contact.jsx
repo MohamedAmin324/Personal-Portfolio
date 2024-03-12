@@ -48,7 +48,7 @@ export default function ContactHero() {
 	}
 
 	return (
-		<HeroSectionTemplate mainTitle='Contact Me'>
+		<HeroSectionTemplate mainTitle='Contact'>
 			<Form
 				noValidate
 				validated={validate}
