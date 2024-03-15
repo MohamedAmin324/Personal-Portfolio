@@ -9,17 +9,16 @@ export default function Header() {
 	const [isSmallScreen, setIsSmallScreen] = useState(
 		() => window.innerWidth < 768
 	);
-
-	useEffect(() => {
-		window.onresize = () => setIsSmallScreen(() => window.innerWidth < 768);
-
-		return () => (window.onresize = null);
-	}, []);
-
 	const [isDarkMode] = useContext(DarkModeTheme);
 	const [isExpanded, setIsExpanded] = useState(false);
 
 	const updateExpandedState = () => setIsExpanded((prev) => !prev);
+
+	useEffect(() => {
+		window.onresize = () => setIsSmallScreen(window.innerWidth < 768);
+
+		return () => (window.onresize = null);
+	}, []);
 
 	useEffect(() => {
 		// prevent scrolling behavior when the navbar is expanded

@@ -2,24 +2,28 @@
 @use './custom-classes';
 @use './hamburger-icon';
 
-
 @include color-mode(dark) {
 	.nav-item:hover {
-        &:not(.navbar-nav > &:last-child) {
-            background-color: unset;
-        }
+		&:not(.navbar-nav > &:last-child) {
+			background-color: unset;
+		}
 	}
 }
 
 @include color-mode(light) {
-    .hamburger-menu::after,
-    .hamburger-menu::before,
-    .customized-checkbox {
-        background-color: var(--bs-black);
-    }
+	.hamburger-menu::after,
+	.hamburger-menu::before,
+	.customized-checkbox {
+		background-color: var(--bs-black);
+	}
 
-    // make the carousel controls visible on light mode
-    .carousel-control-prev-icon, .carousel-control-next-icon {
-        background-color: var(--bs-black);
-    }
+	// make the carousel controls visible on light mode
+	.carousel-control-prev-icon,
+	.carousel-control-next-icon {
+		background-color: var(--bs-black);
+	}
+
+	.bg-light {
+		--bs-bg-opacity: 0;
+	}
 }
