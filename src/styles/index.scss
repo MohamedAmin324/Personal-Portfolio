@@ -1,4 +1,6 @@
-@use 'bootstrap/scss/bootstrap' as *;
+@use 'bootstrap/scss/bootstrap' as * with (
+	$font-family-base: "Nunito",
+);
 @use './custom-classes';
 @use './hamburger-icon';
 

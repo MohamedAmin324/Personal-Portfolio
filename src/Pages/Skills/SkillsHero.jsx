@@ -10,7 +10,7 @@ export default function SkillsHero() {
 			<Container className='my-5'>
 				<Row className='g-4'>
 					{SKILLS_OBJ_INFO.map(({ cardTitle, cardId, iconsList }) => (
-						<Col md={4} key={cardId}>
+						<Col md={6} lg={4} key={cardId}>
 							<SkillsCard
 								cardTitle={cardTitle}
 								iconsList={iconsList}

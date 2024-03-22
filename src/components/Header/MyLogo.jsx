@@ -18,10 +18,10 @@ export default function MyLogo({
 		>
 			<Link to='/' className='nav-link d-flex'>
 				<img src={isDarkMode ? imgDarkUrl : imgUrl} />
-				<span className='my-name d-none d-md-block'>Med Amine</span>
+				<span className='my-name ms-1 d-none d-md-block'>Med Amine</span>
 			</Link>
 
-			<div className='my-name d-block d-md-none'>Med Amine</div>
+			<div className='my-name ms-1 d-block d-md-none'>Med Amine</div>
 
 			<Navbar.Toggle
 				bsPrefix='hamburger-menu'

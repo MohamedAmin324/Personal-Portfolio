@@ -18,6 +18,7 @@
 
 .custom-header {
 	font-size: calc(2rem + 1.5vw);
+	font-family: "Oswald", sans-serif;;
 }
 
 .custom-link-padding {
@@ -51,13 +52,10 @@
 	display: none;
 }
 
-.my-name {
-	margin-left: calc(1rem * 0.25);
-	display: none;
-}
-
 .custom-link-padding {
-	padding: 10px;
+	padding: 10px {
+		left: 30px;
+	};
 }
 
 @media (width >= 768px) {

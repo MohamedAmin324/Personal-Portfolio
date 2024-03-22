@@ -15,7 +15,7 @@ export default function Header() {
 		const bodyElement = document.body;
 		isExpanded
 			? (bodyElement.style.overflow = 'hidden')
-			: (bodyElement.style.overflow = 'scroll');
+			: (bodyElement.style.overflow = '');
 
 	}, [isExpanded]);
 
