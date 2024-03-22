@@ -4,8 +4,7 @@ import { DarkModeTheme } from '../../context/dark-mode-theme-context';
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 
-
-export default function NavigationBar({ isSmallScreen }) {
+export default function NavigationBar() {
 	const [isDarkMode, updateDarkModeState] = useContext(DarkModeTheme);
 
 	return (
@@ -21,8 +20,8 @@ export default function NavigationBar({ isSmallScreen }) {
 							<Nav.Link as='div' bsPrefix='unstyled-link-wrapper' eventKey={id}>
 								<Link
 									to={pathName}
-									className={`nav-link ${name !== 'Skills' ? 'd-flex' : ''} ${
-										isSmallScreen ? 'custom-link-padding' : ''
+									className={`nav-link custom-link-padding ${
+										name !== 'Skills' ? 'd-flex' : ''
 									}`}
 								>
 									<img
@@ -42,9 +41,7 @@ export default function NavigationBar({ isSmallScreen }) {
 							</Nav.Link>
 						) : (
 							<Button
-								className={`nav-link ${
-									isSmallScreen ? 'custom-link-padding' : ''
-								}`}
+								className={`nav-link custom-link-padding`}
 								style={{ backgroundColor: 'inherit', border: 'none' }}
 							>
 								<img

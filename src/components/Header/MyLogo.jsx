@@ -5,8 +5,10 @@ import { useContext } from 'react';
 import { DarkModeTheme } from '../../context/dark-mode-theme-context';
 import { Link } from 'react-router-dom';
 
-
-export default function MyLogo({ isSmallScreen, isExpanded, updateExpandedState }) {
+export default function MyLogo({
+	isExpanded,
+	updateExpandedState,
+}) {
 	const [isDarkMode] = useContext(DarkModeTheme);
 
 	return (
@@ -16,32 +18,25 @@ export default function MyLogo({ isSmallScreen, isExpanded, updateExpandedState 
 		>
 			<Link to='/' className='nav-link d-flex'>
 				<img src={isDarkMode ? imgDarkUrl : imgUrl} />
-				{isSmallScreen ? null : (
-					<span className={isSmallScreen ? 'ms-1' : 'ms-1 fw-bolder'}>
-						Med Amine
-					</span>
-				)}
+				<span className='my-name d-none d-md-block'>Med Amine</span>
 			</Link>
-			{isSmallScreen ? (
-				<div className={isSmallScreen ? 'ms-1' : 'ms-1 fw-bolder'}>
-					Med Amine
-				</div>
-			) : null}
-			{isSmallScreen ? (
-				<Navbar.Toggle
-					bsPrefix='hamburger-menu'
-					aria-controls='navbar-nav'
-					as='div'
-					onClick={() => updateExpandedState(!isExpanded)}
-				>
-					<input
-						type='checkbox'
-						checked={isExpanded}
-						onChange={() => updateExpandedState(!isExpanded)}
-						className={`customized-checkbox ${isExpanded ? 'w-0' : ''}`}
-					/>
-				</Navbar.Toggle>
-			) : null}
+
+			<div className='my-name d-block d-md-none'>Med Amine</div>
+
+			<Navbar.Toggle
+				bsPrefix='hamburger-menu'
+				aria-controls='navbar-nav'
+				as='div'
+				onClick={() => updateExpandedState(!isExpanded)}
+				className='d-md-none'
+			>
+				<input
+					type='checkbox'
+					checked={isExpanded}
+					onChange={() => updateExpandedState(!isExpanded)}
+					className={`customized-checkbox ${isExpanded ? 'w-0' : ''}`}
+				/>
+			</Navbar.Toggle>
 		</Stack>
 	);
 }

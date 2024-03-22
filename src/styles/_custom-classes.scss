@@ -24,19 +24,6 @@
 	padding: 10px;
 }
 
-.custom-position {
-	top: 46px;
-	left: -25px;
-	z-index: 1;
-	width: 100vw;
-}
-
-.blocker {
-	height: 100vh;
-	z-index: 0;
-	width: 100vw;
-}
-
 .svg-size {
 	width: 35px;
 	height: 35px;
@@ -52,21 +39,34 @@
 	}
 }
 
-// hide the dropdown toggle when the navbar is expanded because it keeps showing up on top of the .blocker element set on the navbar
-.dropdown-toggle-custom::before {
-	content: '';
-	display: inline-block;
-	width: 100%;
-	height: 100%;
-	background-color: var(--bs-body-bg);
-	position: absolute;
-	top: 0;
-	left: 0;
+.contact-form > :not(button) {
+	margin-bottom: 1.5rem;
 }
 
-@media (width > 768px) {
+.navbar-brand {
+	padding-top: 0;
+}
+
+.content-mask {
+	display: none;
+}
+
+.my-name {
+	margin-left: calc(1rem * 0.25);
+	display: none;
+}
+
+.custom-link-padding {
+	padding: 10px;
+}
+
+@media (width >= 768px) {
 	.custom-width {
 		width: 50% !important;
+	}
+
+	.my-name {
+		font-weight: bolder;
 	}
 }
 
@@ -76,6 +76,23 @@
 	}
 }
 
-.contact-form > :not(button) {
-	margin-bottom: 1.5rem;
+@media (width < 768px) {
+	.navbar-brand {
+		width: 100%;
+	}
+
+	.navbar-collapse {
+		position: absolute;
+		top: 45px;
+		left: -25px;
+		z-index: 1;
+		width: 100vw;
+	}
+
+	.content-mask {
+		display: block;
+		height: 100vh;
+		z-index: 0;
+		width: 100vw;
+	}
 }
