@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { Container } from 'react-bootstrap';
-import { NAVIGATION_ITEMS_INFO } from '../data/navigation_items_info';
+import { NAVIGATION_ITEMS_INFO } from '../data/navigation-items-info';
 import homePageIcon from '../assets/navigation-bar-icons/Dark-Mode/coding-svgrepo-com.svg';
 
 export default function HeroSectionTemplate({ mainTitle, children }) {
@@ -15,7 +15,7 @@ export default function HeroSectionTemplate({ mainTitle, children }) {
 			pageInfoObj?.logosUrls.darkModeUrl ??
 			// the Home page icon must be set individually because it is not in the NAVIGATION_ITEMS_INFO list
 			homePageIcon;
-	}, []);
+	}, [mainTitle]);
 
 	return (
 		<Container className='custom-margin-top' fluid='sm'>

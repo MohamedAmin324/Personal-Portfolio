@@ -1,5 +1,5 @@
 import { Button, Nav } from 'react-bootstrap';
-import { NAVIGATION_ITEMS_INFO } from '../../data/navigation_items_info';
+import { NAVIGATION_ITEMS_INFO } from '../../data/navigation-items-info';
 import { DarkModeTheme } from '../../context/dark-mode-theme-context';
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';

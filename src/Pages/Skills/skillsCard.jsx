@@ -11,7 +11,7 @@ export default function SkillsCard({ cardTitle, iconsList, cardId }) {
 				isDarkMode ? 'light' : 'dark'
 			}  p-3 rounded-3 h-100`}
 		>
-			<h3 className='mb-5'>{cardTitle}</h3>
+			<h3 className='mb-4 text-center fw-bold'>{cardTitle}</h3>
 			<Stack gap={4} key={cardId}>
 				{iconsList.map(({ name, iconUrl, itemId, ecoSystemIcons }) => (
 					<div key={itemId} className='d-flex'>

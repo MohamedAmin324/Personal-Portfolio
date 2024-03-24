@@ -18,7 +18,7 @@
 
 .custom-header {
 	font-size: calc(2rem + 1.5vw);
-	font-family: "Oswald", sans-serif;;
+	font-family: 'Oswald', sans-serif;
 }
 
 .custom-link-padding {
@@ -55,7 +55,11 @@
 .custom-link-padding {
 	padding: 10px {
 		left: 30px;
-	};
+	}
+}
+
+.custom-btn-width {
+	width: 100%;
 }
 
 @media (width >= 768px) {
@@ -66,11 +70,15 @@
 	.my-name {
 		font-weight: bolder;
 	}
+
+	button.custom-btn-width {
+		width: 30%;
+	}
 }
 
 @media (width > 481px) {
 	.custom-btn-width {
-		width: 20%;
+		width: 50%;
 	}
 }
 

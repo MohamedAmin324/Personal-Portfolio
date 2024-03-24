@@ -35,13 +35,13 @@ $animation-parameters: 250ms ease-in-out;
 
 	&:has(.customized-checkbox:checked)::before {
 		transform: rotate(45deg);
-		translate: 0 $line-height / -2;
+		translate: 0 calc($line-height / -2);
 		width: $container-height * sqrt(2);
 	}
 
 	&:has(.customized-checkbox:checked)::after {
 		transform: rotate(-45deg);
-		translate: 0 $line-height / 2;
+		translate: 0 calc($line-height / 2);
 		width: $container-height * sqrt(2);
 	}
 
